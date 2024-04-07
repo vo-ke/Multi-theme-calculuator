@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="default">
+  
+<div id="outercontainer">
+  <!-- 1st ha;f -->
+<div id="first">
+  <section id="switch">
+   <he>THEME</he> <label class="toggle" onclick="changetheme()">
+      <span class="slider" ></span>
+      <span id="ball"></span>
+      <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+      </div>
+   </label>
+  </section>
+  <header class="calc">calc</header>
+  <input class="output" type="text" readonly>
+</div>
+<!-- 2nd haff -->
+<div id="second">
+  <section>
+    <button class="digits" onclick="check('7')">7</button>
+    <button class="digits" onclick="check('8')">8</button>
+    <button class="digits" onclick="check('9')">9</button>
+    <button class="anomaly" onclick="clearone()">DEL</button>
+    <button class="digits" onclick="check('4')">4</button>
+    <button class="digits" onclick="check('5')">5</button>
+    <button class="digits" onclick="check('6')">6</button>
+    <button class="digits" onclick="check('+')">+</button>
+    <button class="digits" onclick="check('1')">1</button>
+    <button class="digits" onclick="check('2')">2</button>
+    <button class="digits" onclick="check('3')">3</button>
+    <button class="digits" onclick="check('-')">-</button>
+    <button class="digits" onclick="check('.')">.</button>
+    <button class="digits" onclick="check('0')">0</button>
+    <button class="digits" onclick="check('/')">/</button>
+    <button class="digits" onclick="check('*')">x</button>
+    <button class="anomaly" id="reset" onclick="clearall()">RESET</button>
+    <button class="last" onclick="calculate()">=</button>
+  </section>
+</div>
+</div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+  <script src="custom.js"></script>
+</body>
+</html>
